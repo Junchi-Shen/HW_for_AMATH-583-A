@@ -7,6 +7,3 @@ g++ -std=c++17 -c -fPIC ref_dgemm.cpp -o ref_dgemm.o
 
 2. Create the shared object library:
 g++ -shared -o librefBLAS.so ref_daxpy.o ref_dgemv.o ref_dgemm.o
-
-3. (Optional) To link and use the library in a test program:
-g++ -std=c++17 -o xtest_program test_main.cpp -L. -lrefBLAS
